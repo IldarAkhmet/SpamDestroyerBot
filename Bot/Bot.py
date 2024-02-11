@@ -3,6 +3,8 @@ from TOKEN import TOKEN_API
 from model import get_model
 import Vocabulary
 import torch
+from database import engine
+import pandas as pd
 
 
 bot = Bot(TOKEN_API) # создаем бота с нашим токеном
@@ -10,7 +12,15 @@ dp = Dispatcher(bot) # анализ и инициализая всех вход�
 
 model = get_model() # инициализируем нашу модель
 
-voc = Vocabulary() # экземпляр класса словарь
+texts = pd.read_sql(
+    """
+        SELECT *
+        FROM public.email_texts
+    """,
+    con=engine
+)['text'] # берем из наших данных только тексты
+
+voc = Vocabulary(texts.values, 4) # экземпляр класса словарь
 pad_idx = len(voc.vocabulary) # длина словаря
 
 # @dp.message_handler()
