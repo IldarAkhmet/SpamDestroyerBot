@@ -1,0 +1,5 @@
+aiogram==2.25.1
+pandas
+numpy==1.26.3
+torch==2.2.0
+sqlalchemy-2.0.26it 
