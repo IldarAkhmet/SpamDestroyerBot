@@ -28,7 +28,7 @@ pad_idx = len(voc.vocabulary) # длина словаря
 # async def echo(message: types.Message):
 #     await message.answer(text=message.text) # ответить на сообщение
 
-@dp.message_handler(commands=['start'])
+@dp.message_handler()
 async def echo(message: types.Message):
     text_list = voc.encode(message.text)
     for_model = torch.tensor(text_list + [pad_idx] * (4 - len(text_list))).unsqueeze(0) # максимальное ядро свертки 4
