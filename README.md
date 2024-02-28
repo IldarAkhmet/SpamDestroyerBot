@@ -13,7 +13,7 @@
 
 ### Технологии:
 <div>
-  Python(pandas, seaborn, matplotlib, numpy, scikit-learn, pytorch, fasttext, sqlalchemy), SQL(postgresql)
+  Python(pandas, seaborn, matplotlib, numpy, scikit-learn, pytorch, fasttext, sqlalchemy, aiogram), SQL(postgresql)
 </div>
 
 ---
