@@ -12,7 +12,7 @@
 ---
 
 ### Технологии:
-<div align="center">
+<div>
   Python(pandas, seaborn, matplotlib, numpy, scikit-learn, pytorch, fasttext, sqlalchemy), SQL(postgresql)
 </div>
 
